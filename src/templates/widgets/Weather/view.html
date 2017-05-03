@@ -3,17 +3,19 @@
         Insira o nome da Cidade na configuração.
     </div>
     <div class="weather" ng-if="data">
-        <div class="col-md-4">
-            <i class="owf owf-4x owf-{{data.weather[0].id}}"></i>
-            <p class="description">{{data.weather[0].description}}</p>
-            <!--<img class="thumbnail" ng-src="{{'http://openweathermap.org/img/w/'+data.weather[0].icon+'.png'}}">-->
-        </div>
-        <div class="col-md-8">
-            <h4>{{data.name}} ({{data.sys.country}})</h4>
-            <dl>
-                <dt>Temperatura:</dt>
-                <dd>{{data.main.temp_min | number:0}}ºC - {{data.main.temp_max | number:0}}ºC</dd>
-            </dl>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="owf owf-4x owf-{{data.weather[0].id}}"></i>
+                <p class="description">{{data.weather[0].description}}</p>
+                <!--<img class="thumbnail" ng-src="{{'http://openweathermap.org/img/w/'+data.weather[0].icon+'.png'}}">-->
+            </div>
+            <div class="col-md-8">
+                <h4>{{data.name}} ({{data.sys.country}})</h4>
+                <dl>
+                    <dt>Temperatura:</dt>
+                    <dd>{{data.main.temp_min | number:0}}ºC - {{data.main.temp_max | number:0}}ºC</dd>
+                </dl>
+            </div>
         </div>
     </div>
 </div>

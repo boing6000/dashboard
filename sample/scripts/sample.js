@@ -33,6 +33,7 @@ angular.module('sample', [
     'adf.widget.linklist',
     'adf.widget.pdfviewer',
     'adf.widget.table',
+    'adf.widget.charts',
     // 'adf.widget.github',
     // 'adf.widget.version',
     'adf.widget.clock',

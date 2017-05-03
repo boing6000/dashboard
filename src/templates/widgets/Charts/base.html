@@ -1,0 +1,17 @@
+<div>
+    <div class="alert alert-info" ng-if="!data">
+        Insira uma URL na configuração do widget
+    </div>
+
+    <div ng-if="data">
+        <canvas class="chart chart-base"
+                chart-type="config.type"
+                chart-data="data.values"
+                chart-options="options"
+                chart-colors="colors"
+                chart-labels="data.labels"
+                chart-series="data.series"
+                chart-dataset-override="data.override">
+        </canvas>
+    </div>
+</div>

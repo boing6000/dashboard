@@ -1,0 +1,41 @@
+<form role="form">
+    <div class="form-group hidden">
+        <label for="title">Título do Chart</label>
+        <input id="title" type="text" class="form-control" ng-model="config.title" placeholder="Título da Tabela" >
+    </div>
+    <div class="form-group">
+        <label for="type">Tipo</label>
+        <select id="type" class="form-control" ng-model="config.type">
+            <option ng-repeat="option in options" value="{{option.type}}">{{option.label}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="url">URL</label>
+        <input id="url" type="text" class="form-control" ng-model="config.url" placeholder="Entre a URL" >
+    </div>
+    <div class="form-group">
+        <label for="root">Elemento Raiz</label>
+        <input id="root" type="text" class="form-control" ng-model="config.root" placeholder="Insira o nome do elemento raiz" >
+    </div>
+    <!--
+        <div>
+            <label>Legenda</label>
+    </div>
+        <div class="form-inline padding-bottom" ng-repeat="($j,col) in config.labels">
+            <div class="form-group">
+                <label class="sr-only" for="title-{{$j}}">Título</label>
+                <input type="text" id="title-{{$j}}" class="form-control" placeholder="Título" ng-model="col.title" required="">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="path-{{$j}}">Caminho</label>
+                <input type="text" id="path-{{$j}}" class="form-control" placeholder="Caminho" ng-model="col.path" required="">
+            </div>
+            <button type="button" class="btn btn-warning" ng-click="removeColumn($j)">
+                <i class="fa fa-minus"></i> Remover Legenda
+            </button>
+        </div>
+
+        <button type="button" class="btn btn-primary" ng-click="addColumn()">
+            <i class="fa fa-plus"></i> Adicionar Legenda
+        </button>-->
+</form>
