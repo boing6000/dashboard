@@ -1,0 +1,25 @@
+<form class="form-inline" role="form">
+    <div>
+        <label>Links</label>
+    </div>
+    <div class="padding-bottom" ng-repeat="link in config.links">
+        <div class="form-group">
+            <label class="sr-only" for="title-{{$index}}">Título</label>
+            <input type="text" id="title-{{$index}}" class="form-control" placeholder="Título" ng-model="link.title" required="">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="href-{{$index}}">URL</label>
+            <input type="text" id="href-{{$index}}" class="form-control" placeholder="http://example.com" ng-model="link.href" required="">
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="target-{{$index}}">Target</label>
+            <input type="text" id="target-{{$index}}" class="form-control" placeholder="_self" ng-model="link.target" required="">
+        </div>
+        <button type="button" class="btn btn-warning" ng-click="removeLink($index)">
+            <i class="fa fa-minus"></i> Remover
+        </button>
+    </div>
+    <button type="button" class="btn btn-primary" ng-click="addLink()">
+        <i class="fa fa-plus"></i> Adicionar
+    </button>
+</form>

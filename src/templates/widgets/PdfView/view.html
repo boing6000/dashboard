@@ -1,0 +1,9 @@
+<div class="pdf">
+    <uib-tabset>
+        <uib-tab heading="{{pdf.title}}" ng-repeat="pdf in config.pdfs">
+            <div class="embed-responsive embed-responsive-16by9">
+                <div pdf-viewer="" class="embed-responsive-item" src="pdf.href"></div>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

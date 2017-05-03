@@ -1,0 +1,15 @@
+{
+  "env": {
+    "browser": true,
+    "jasmine": true,
+    "protractor": true
+  },
+  "globals": {
+    "Sortable": true,
+    "module": false,
+    "inject": false
+  },
+  "extends": [
+    "eslint:recommended"
+  ]
+}

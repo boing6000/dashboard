@@ -1,0 +1,22 @@
+<div>
+  <div ng-hide="data" class="alert alert-info" role="alert">
+    Insira uma URL na configuração do widget
+  </div>
+  <uib-tabset>
+    <uib-tab heading="{{table.title}}" ng-repeat="($i, table) in config">
+      <table class="table">
+        <tr>
+          <th ng-repeat="head in data[$i].headers">
+            {{head}}
+          </th>
+        </tr>
+        <tr ng-repeat="row in data[$i].rows">
+          <td ng-repeat="col in row">
+            {{col}}
+          </td>
+        </tr>
+      </table>
+    </uib-tab>
+  </uib-tabset>
+
+</div>

@@ -1,0 +1,53 @@
+<form role="form" style="max-height: 600px; overflow-y: auto;">
+  <uib-accordion>
+    <div uib-accordion-group="" ng-repeat="($i, table) in config" is-open="status[$i].open">
+      <uib-accordion-heading>
+        {{table.title}}
+        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status[$i].open, 'glyphicon-chevron-right': !status[$i].open}"></i>
+      </uib-accordion-heading>
+      <div class="form-group">
+        <label for="title-{{$i}}">Título da Tabela</label>
+        <input id="title-{{$i}}" type="text" class="form-control" ng-model="table.title" placeholder="Título da Tabela">
+      </div>
+      <div class="form-group">
+        <label for="url-{{$i}}">URL</label>
+        <input id="url-{{$i}}" type="text" class="form-control" ng-model="table.url" placeholder="Entre a URL">
+      </div>
+      <div class="form-group">
+        <label for="root-{{$i}}">Elemento Raiz</label>
+        <input id="root-{{$i}}" type="text" class="form-control" ng-model="table.root" placeholder="Insira o nome do elemento raiz">
+      </div>
+
+      <div>
+        <label>Colunas</label>
+      </div>
+
+      <div class="form-inline padding-bottom" ng-repeat="($j,col) in table.columns">
+        <div class="form-group">
+          <label class="sr-only" for="title-{{$j}}">Título</label>
+          <input type="text" id="title-{{$j}}" class="form-control" placeholder="Título" ng-model="col.title" required="">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="path-{{$j}}">Caminho</label>
+          <input type="text" id="path-{{$j}}" class="form-control" placeholder="Caminho" ng-model="col.path" required="">
+        </div>
+        <button type="button" class="btn btn-warning" ng-click="removeColumn($i,$j)">
+          <i class="fa fa-minus"></i> Remover
+        </button>
+      </div>
+
+      <button type="button" class="btn btn-primary" ng-click="addColumn($i)">
+        <i class="fa fa-plus"></i> Adicionar Coluna
+      </button>
+
+      <button type="button" class="btn btn-danger" ng-click="removeTable($i)">
+        <i class="fa fa-trash"></i> Remover Tabela
+      </button>
+    </div>
+  </uib-accordion>
+
+  <button type="button" class="btn btn-primary" ng-click="addTable()">
+    <i class="fa fa-plus"></i> Adicionar Tabela
+  </button>
+
+</form>
