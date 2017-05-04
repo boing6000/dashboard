@@ -6,8 +6,8 @@
     "Andre Teodoro"
   ],
   "main": [
-    "dist/kosbit-dashboard-tpls.js",
-    "dist/kosbit-dashboard.css"
+    "dist/angular-dashboard-framework-tpls.js",
+    "dist/angular-dashboard-framework.css"
   ],
   "ignore": [
     ".git",
